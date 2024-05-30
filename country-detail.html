@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/detail-style.css">
+</head>
+
+<body>
+    <nav>
+        <div>
+            <h2>Where in the world?</h2>
+        </div>
+        <div onclick="darkMode()" id="dark-mode">
+            <i class="fa fa-moon-o" aria-hidden="true"></i>
+            <span>Dark Mode</span>
+        </div>
+        <div onclick="lightMode()" id="light-mode">
+            <i class="fa fa-sun-o" aria-hidden="true"></i>
+            <span>Light Mode</span>
+        </div>
+    </nav>
+
+    <button onclick="goBack()" class="back-button">
+        <i class="fa fa-long-arrow-left" style="font-size: 15px;"></i>
+        Back
+    </button>
+
+    <div class="container">
+        <div class="country-details-wrapper">
+            <img id="flag" alt="Flag">
+            <div class="country-details">
+                <h1 id="name"></h1>
+                <div class="details">
+                    <div>
+                        <p><span class="title">Native Name: </span><span id="nativeName"></span></p>
+                        <p><span class="title">Population: </span><span id="population"></span></p>
+                        <p><span class="title">Region: </span><span id="region"></span></p>
+                        <p><span class="title">Sub-region: </span><span id="subregion"></span></p>
+                        <p><span class="title">Capital: </span><span id="capital"></span></p>
+                    </div>
+                    <div>
+                        <p><span class="title">Top-level Domain: </span><span id="tld"></span></p>
+                        <p><span class="title">Currencies: </span><span id="currencies"></span></p>
+                        <p><span class="title">Languages: </span><span id="languages"></span></p>
+                    </div>
+                </div>
+
+                <div class="border-country-wrapper">
+                    <span class="title">Border Countries: </span> <span class="border-countries"></span>
+                </div>
+
+            </div>
+
+
+            <!-- <div class="border-countries">
+                 Border country buttons will be dynamically added here by JavaScript 
+            </div> -->
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./js/detail-script.js"></script>
+</body>
+
+</html>

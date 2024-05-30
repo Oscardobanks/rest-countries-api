@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <nav>
+        <div>
+            <h2>Where in the world?</h2>
+        </div>
+        <div onclick="darkMode()" id="dark-mode">
+            <i class="fa fa-moon-o" aria-hidden="true"></i>
+            <span>Dark Mode</span>
+        </div>
+        <div onclick="lightMode()" id="light-mode">
+            <i class="fa fa-sun-o" aria-hidden="true"></i>
+            <span>Light Mode</span>
+        </div>
+    </nav>
+    <section class="container">
+        <div class="search-filter">
+            <div class="search">
+                <i class="search-icon fa fa-search"></i>
+                <input type="search" name="search" id="searchInput" placeholder="Search for a Continent...">
+            </div>
+            <div class="dropdown">
+                <button id="dropbtn" class="dropbtn" onclick="toggleDropdown()">
+                    <span id="btntext">Filter by Region</span>
+                    <i id="dropdown-icon" class="fa fa-chevron-down"></i>
+                </button>
+                <div id="dropdown-content" class="dropdown-content">
+                    <a href="#" onclick="selectContinent('Africa')">Africa</a>
+                    <a href="#" onclick="selectContinent('America')">America</a>
+                    <a href="#" onclick="selectContinent('Asia')">Asia</a>
+                    <a href="#" onclick="selectContinent('Europe')">Europe</a>
+                    <a href="#" onclick="selectContinent('Oceania')">Oceania</a>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div id="countries-container"></div>
+        </div>
+
+
+
+    </section>
+
+    <script type="text/javascript" src="./js/script.js"></script>
+</body>
+
+</html>
