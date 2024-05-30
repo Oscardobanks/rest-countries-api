@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             languages: borderCountry.languages ? encodeURIComponent(JSON.stringify(borderCountry.languages)) : ''
                         };
                         const urlParams = encodeQueryData(countryDetails);
-                        window.location.href = `http://localhost:5500/country-detail.html?${urlParams}`;
+                        window.location.href = `country-detail.html?${urlParams}`;
                     });
                     borderCountriesContainer.appendChild(button);
                 }
