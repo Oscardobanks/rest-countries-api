@@ -1,0 +1,228 @@
+body {
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: var(--background-color);
+}
+
+:root{
+  --background-color: hsl(0, 0%, 98%);
+  --element-background-color: hsl(0, 0%, 100%);
+  --hover-color: hsl(0, 4%, 91%);
+  --input-color: hsl(0, 0%, 52%);
+  --text-color: hsl(200, 15%, 8%);
+}
+
+.dark-theme{
+  --background-color: hsl(207, 26%, 17%);
+  --element-background-color: hsl(204, 23%, 23%);
+  --hover-color: hsl(209, 19%, 32%);
+  --input-color: hsl(0, 0%, 100%);
+  --text-color: hsl(0, 0%, 100%);
+}
+
+nav {
+  display: flex;
+  padding: 0 5%;
+  justify-content: space-between;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 0 5%;
+}
+
+#dark-mode,
+#light-mode {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#light-mode {
+  display: none;
+}
+
+.dark-mode,
+.light-mode {
+  margin: auto 0;
+}
+
+.search-filter {
+  margin: 30px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 640px) {
+  .search-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+input::placeholder{
+  color: var(--input-color);
+}
+
+input{
+  background-color: var(--element-background-color);
+}
+
+.search-icon {
+  position: absolute;
+  z-index: 10;
+  padding: 0 10px;
+  padding-top: 8px;
+  color: var(--input-color);
+}
+
+#searchInput {
+  position: relative;
+  padding: 10px;
+  padding-left: 30px;
+  width: 300px;
+  color: var(--text-color);
+  border: none;
+  box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: var(--element-background-color);
+  color: var(--text-color);
+  padding: 10px 15px;
+  margin-bottom: 5px;
+  font-size: 16px;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+#btntext {
+  font-weight: 300;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 200px;
+  padding: 10px 0;
+  background-color: var(--element-background-color);
+  color: var(--text-color);
+  min-width: 160px;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: var(--text-color);
+  padding: 5px 15px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+
+.dropdown-content.show a:hover {
+  background-color: var(--hover-color);
+}
+
+.dropdown-content.show a:focus {
+  background-color: #f5f5f5;
+}
+
+.dropdown-content.show a:active {
+  background-color: #ccc;
+}
+
+#dropdown-icon {
+  margin-left: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+#dropdown-icon.rotate {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.dropdown-content.show + #dropbtn #dropdown-icon.rotate {
+  transform: rotate(0deg);
+}
+
+#countries-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 50px;
+}
+
+@media (max-width: 640px) {
+  #countries-container {
+    grid-template-columns: 1fr;
+    grid-gap: 40px;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 900px) {
+  #countries-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+  }
+}
+
+.card {
+  background-color: var(--element-background-color);
+  color: var(--text-color);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 5px 5px 0 0;
+  box-shadow: 0 1px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+.country-details {
+  padding: 20px;
+  padding-bottom: 30px;
+}
+
+.country-details h2 {
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+p {
+  margin: 0;
+}
+
+span {
+  font-weight: bold;
+}
+
+
+
+
+
